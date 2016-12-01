@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="84j-B2-yhc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dkB-xa-Cxx">
+            <objects>
+                <navigationController id="84j-B2-yhc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Mh-Cd-nVo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="utO-0S-8Vj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3J-Ur-cJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-711" y="139"/>
+        </scene>
+        <!--ShareDemo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="79F-wZ-qF6">
+                                <rect key="frame" x="83" y="186" width="208" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="kwk-Tl-f7g"/>
+                                    <constraint firstAttribute="width" constant="208" id="zjM-cx-zMW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pg-w3-aRT">
+                                <rect key="frame" x="108" y="521" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="I1w-j9-L0S"/>
+                                    <constraint firstAttribute="height" constant="30" id="ebY-QE-zTl"/>
+                                </constraints>
+                                <state key="normal" title="保存图片到本地">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9a-ms-i9M"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入点啥" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0h4-WP-Lkk">
+                                <rect key="frame" x="83" y="146" width="208" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gOk-7q-jIJ"/>
+                                    <constraint firstAttribute="width" constant="208" id="noi-Lw-MT5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3j-Ua-B9D">
+                                <rect key="frame" x="10" y="69" width="355" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="VHt-d6-I7Z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o3j-Ua-B9D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="6K6-2y-unH"/>
+                            <constraint firstItem="79F-wZ-qF6" firstAttribute="top" secondItem="0h4-WP-Lkk" secondAttribute="bottom" constant="10" id="EyV-O3-7fS"/>
+                            <constraint firstItem="o3j-Ua-B9D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="M8q-Dv-wGX"/>
+                            <constraint firstItem="79F-wZ-qF6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U33-DF-xoz"/>
+                            <constraint firstAttribute="trailing" secondItem="o3j-Ua-B9D" secondAttribute="trailing" constant="10" id="d1w-J5-gRL"/>
+                            <constraint firstItem="79F-wZ-qF6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mSQ-mW-me5"/>
+                            <constraint firstItem="7Pg-w3-aRT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oAK-20-zTh"/>
+                            <constraint firstItem="7Pg-w3-aRT" firstAttribute="top" secondItem="79F-wZ-qF6" secondAttribute="bottom" constant="40" id="wQD-MS-PW1"/>
+                            <constraint firstItem="0h4-WP-Lkk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wn3-6L-5Nm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ShareDemo" id="dQF-xa-NqP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="ag2-z2-zmN">
+                            <color key="tintColor" red="0.59215686270000001" green="0.93725490199999995" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="shareImageToWechat:" destination="BYZ-38-t0r" id="ZJt-Ex-6ke"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="share" width="16" height="16"/>
+    </resources>
+</document>
